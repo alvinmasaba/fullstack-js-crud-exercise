@@ -120,15 +120,27 @@ const Edit = () => {
           value={ branch }
           onChange={handleInputChange}
         />
-        <label htmlFor="active">Active</label>
-        <input
-          type="text"
-          id="active"
-          name="active"
-          placeholder=""
-          value={ active }
-          onChange={handleInputChange}
-        />
+        <div>
+          <label htmlFor="active">Active</label>
+          <input
+            type="radio"
+            id="active"
+            name="active"
+            value={active}
+            onChange={handleInputChange}
+            checked
+          />
+        </div>
+        <div>
+          <label htmlFor="active">Inactive</label>
+          <input
+            type="radio"
+            id="inactive"
+            name="active"
+            value={active}
+            onChange={handleInputChange}
+          />
+        </div>
         <input type="submit" value="Save" />
         <Link to="/employees">
           <input type="button" value="Go Back" />
