@@ -1,17 +1,31 @@
-const express = require("express");
+import express from "express";
+import sqlite3 from "sqlite3";
+import { open } from "sqlite";
+import cors from "cors"; // Use to access backend API from React.
+import bodyParser from "body-parser"; // Allows access to body of request object.
+
+import employeesRoutes from './routes/employees.js';
+
 const app = express();
-const bodyParser = require("body-parser");
-const cors = require("cors"); // Use to access backend API from React.
 
+const dbPromise = open({
+  filename: "./data.db",
+  driver: sqlite3.Database
+});
+
+// Allow cross-origin API calls.
 app.use(cors());
+
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use('/employees', employeesRoutes);
 
-// Defines the route.
-app.get("/", (req, res) => {
-  res.send("Hola Mundo");
-})
+const setup = async () => {
+  const db = await dbPromise
+  await db.migrate()
+  app.listen(5000, () => {
+    console.log("Server is running on port 5000!");
+  })
+}
 
-app.listen(8080, () => {
-  console.log("Server is running on port 8080!");
-})
+setup()
