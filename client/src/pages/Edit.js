@@ -126,7 +126,7 @@ const Edit = () => {
             type="radio"
             id="active"
             name="active"
-            value={active}
+            value="true"
             onChange={handleInputChange}
             checked={active === 'true'}
           />
@@ -137,7 +137,7 @@ const Edit = () => {
             type="radio"
             id="inactive"
             name="active"
-            value={active}
+            value="false"
             onChange={handleInputChange}
             checked={active === 'false'}
           />
