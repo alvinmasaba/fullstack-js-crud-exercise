@@ -34,3 +34,10 @@ input[type="button"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+.toggle-active {
+  display: flex;
+  justify-content: space-evenly;
+  height: 2em;
+  align-items: center;
+}

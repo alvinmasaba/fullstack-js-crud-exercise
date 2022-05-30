@@ -120,28 +120,30 @@ const Edit = () => {
           value={ branch }
           onChange={handleInputChange}
         />
-        <div>
-          <label htmlFor="active">Active</label>
-          <input
-            type="radio"
-            id="active"
-            name="active"
-            value="true"
-            onChange={handleInputChange}
-            checked={active === 'true'}
-          />
-        </div>
-        <div>
-          <label htmlFor="active">Inactive</label>
-          <input
-            type="radio"
-            id="inactive"
-            name="active"
-            value="false"
-            onChange={handleInputChange}
-            checked={active === 'false'}
-          />
-        </div>
+        <section className="toggle-active">
+          <div>
+            <label htmlFor="active">Active</label>
+            <input
+              type="radio"
+              id="active"
+              name="active"
+              value="true"
+              onChange={handleInputChange}
+              checked={active === 'true'}
+            />
+          </div>
+          <div>
+            <label htmlFor="active">Inactive</label>
+            <input
+              type="radio"
+              id="inactive"
+              name="active"
+              value="false"
+              onChange={handleInputChange}
+              checked={active === 'false'}
+            />
+          </div>
+        </section>
         <input type="submit" value="Save" />
         <Link to="/employees">
           <input type="button" value="Go Back" />

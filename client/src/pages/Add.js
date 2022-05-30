@@ -112,26 +112,28 @@ const Add = () => {
           value={branch}
           onChange={handleInputChange}
         />
-        <div>
-          <label htmlFor="active">Active</label>
-          <input
-            type="radio"
-            id="active"
-            name="active"
-            value="true"
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="active">Inactive</label>
-          <input
-            type="radio"
-            id="inactive"
-            name="active"
-            value="false"
-            onChange={handleInputChange}
-          />
-        </div>
+        <section className="toggle-active">
+          <div>
+            <label htmlFor="active">Active</label>
+            <input
+              type="radio"
+              id="active"
+              name="active"
+              value="true"
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="active">Inactive</label>
+            <input
+              type="radio"
+              id="inactive"
+              name="active"
+              value="false"
+              onChange={handleInputChange}
+            />
+          </div>
+        </section>
         <input type="submit" value="Save" />
         <Link to="/employees">
           <input type="button" value="Go Back" />
