@@ -16,6 +16,15 @@ const Home = () => {
     loadData();
   }, []);
 
+  // Displays red or green dot in home table based on active state.
+  function ActiveState(data) {
+    const active = data;
+    if (active === 'true') {
+      return <span className="dot" id="green"></span>;
+    }
+    return <span className="dot" id="red"></span>;
+  };
+
   const deleteEmployee = (id) => {
     if(window.confirm("Are you sure you want to delete this employee?")) {
       axios.delete(`http://localhost:5000/employees/${id}`);
@@ -51,7 +60,7 @@ const Home = () => {
                 <td>{item.color}</td>
                 <td>{item.city}</td>
                 <td>{item.branch}</td>
-                <td>{item.active}</td>
+                <td>{ActiveState(item.active)}</td>
                 <td>
                   <Link to={`/update-employee/${item.id}`}>
                     <button className="btn btn-edit">Edit</button>
