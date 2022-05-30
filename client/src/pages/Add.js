@@ -120,7 +120,6 @@ const Add = () => {
             name="active"
             value="true"
             onChange={handleInputChange}
-            checked
           />
         </div>
         <div>

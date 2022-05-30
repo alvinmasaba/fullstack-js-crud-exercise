@@ -128,7 +128,7 @@ const Edit = () => {
             name="active"
             value={active}
             onChange={handleInputChange}
-            checked
+            checked={active === 'true'}
           />
         </div>
         <div>
@@ -139,6 +139,7 @@ const Edit = () => {
             name="active"
             value={active}
             onChange={handleInputChange}
+            checked={active === 'false'}
           />
         </div>
         <input type="submit" value="Save" />
