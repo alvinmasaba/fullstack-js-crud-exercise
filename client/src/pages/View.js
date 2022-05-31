@@ -52,7 +52,7 @@ const View = () => {
             <span>{employee.branch}</span>
             <br />
             <br />
-            <strong>Active: </strong>
+            <strong>Assigned: </strong>
             <span>{IsActive(employee.active)}</span>
             <br />
             <br />

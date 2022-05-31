@@ -114,7 +114,7 @@ const Add = () => {
         />
         <section className="toggle-active">
           <div>
-            <label htmlFor="active">Active</label>
+            <label htmlFor="active">Assigned</label>
             <input
               type="radio"
               id="active"
@@ -124,7 +124,7 @@ const Add = () => {
             />
           </div>
           <div>
-            <label htmlFor="active">Inactive</label>
+            <label htmlFor="active">Unassigned</label>
             <input
               type="radio"
               id="inactive"
