@@ -112,9 +112,9 @@ const Add = () => {
           value={branch}
           onChange={handleInputChange}
         />
-        <section className="toggle-active">
+        <section className="toggle-active">Assigned:
           <div>
-            <label htmlFor="active">Assigned</label>
+            <label htmlFor="active">Yes</label>
             <input
               type="radio"
               id="active"
@@ -124,7 +124,7 @@ const Add = () => {
             />
           </div>
           <div>
-            <label htmlFor="active">Unassigned</label>
+            <label htmlFor="active">No</label>
             <input
               type="radio"
               id="inactive"

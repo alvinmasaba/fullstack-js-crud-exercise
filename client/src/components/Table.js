@@ -1,10 +1,10 @@
-import React, { useMemo, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { useTable } from 'react-table';
-import { toast } from 'react-toastify';
-import { COLUMNS } from './columns';
-import './Table.css'
+import React, { useMemo, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { useTable } from "react-table";
+import { toast } from "react-toastify";
+import { COLUMNS } from "./columns";
+import "./Table.css"
 
 export const Table = () => {
   const [data, setData] = useState([]);
@@ -33,15 +33,15 @@ export const Table = () => {
     prepareRow,
   } = tableInstance
 
-  // Handles styling for color and assigned state.
-
+  // Handles styling for color, assigned and action columns.
   function CheckCellHeader(cell) {
-    console.log(cell)
     if (cell.column.Header === 'Assigned') {
       return AssignedState(cell.value)
     } else if (cell.column.Header === 'Color') {
       return DisplayColor(cell.value)
     } else if (cell.column.Header === 'Action') {
+      // Inserts action buttons beneath the Action column.
+      // Target id can be retrieved from cell.row.original.
       return <>
               <Link to={`/update-employee/${cell.row.original.id}`}>
                 <button className="btn btn-edit">Edit</button>
@@ -80,7 +80,7 @@ export const Table = () => {
       toast.success("Employee Deleted Successfully");
       setTimeout(() => loadData(), 500);
     }
-  }
+  };
 
   return (
     <div style={{marginTop: "150px"}}>

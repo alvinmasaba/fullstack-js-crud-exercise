@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './App.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 import Add from "./pages/Add";
 import Edit from "./pages/Edit";
 import View from "./pages/View";
-import { Table } from './components/Table'
+import { Table } from "./components/Table";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <ToastContainer position='top-center' />
+        <ToastContainer position="top-center" />
           <Routes>
             <Route path='/employees' element={<Table/>} />
             <Route path='/add-employee' element={<Add/>} />
