@@ -13,6 +13,7 @@ function App() {
       <div className="App">
         <ToastContainer position="top-center" />
           <Routes>
+            <Route path='/' element={<Table/>} />
             <Route path='/employees' element={<Table/>} />
             <Route path='/add-employee' element={<Add/>} />
             <Route path='/update-employee/:id' element={<Edit/>} />
