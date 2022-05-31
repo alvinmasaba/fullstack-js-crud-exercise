@@ -77,3 +77,10 @@
   background-color: lime;
   box-shadow: 0px 0px 4px 1px lime;
 }
+
+.color-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}

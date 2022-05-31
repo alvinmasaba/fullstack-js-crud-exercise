@@ -25,6 +25,16 @@ const Home = () => {
     return <span className="dot" id="red"></span>;
   };
 
+  // Displays employee color.
+
+  function DisplayColor(inputColor) {
+    const employeeColor = inputColor;
+    if (employeeColor === "") {
+      return "";
+    }
+    return <span className="color-circle" style={{backgroundColor: employeeColor, boxShadow: `0px 0px 2px 1px ${employeeColor}`}}></span>;
+  };
+
   const deleteEmployee = (id) => {
     if(window.confirm("Are you sure you want to delete this employee?")) {
       axios.delete(`http://localhost:5000/employees/${id}`);
@@ -57,7 +67,7 @@ const Home = () => {
                 <td>{item.name}</td>
                 <td>{item.code}</td>
                 <td>{item.profession}</td>
-                <td>{item.color}</td>
+                <td>{DisplayColor(item.color)}</td>
                 <td>{item.city}</td>
                 <td>{item.branch}</td>
                 <td>{ActiveState(item.active)}</td>

@@ -8,6 +8,14 @@ const View = () => {
 
   const {id} = useParams();
 
+  function IsActive(data) {
+    const active = data;
+    if (active === 'true') {
+      return "Yes";
+    }
+    return "No";
+  };
+
   useEffect(() => {
     axios
       .get(`http://localhost:5000/employees/${id}`)
@@ -45,7 +53,7 @@ const View = () => {
             <br />
             <br />
             <strong>Active: </strong>
-            <span>{employee.active}</span>
+            <span>{IsActive(employee.active)}</span>
             <br />
             <br />
             <Link to="/employees">
