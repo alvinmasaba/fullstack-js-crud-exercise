@@ -7,7 +7,7 @@
     "color": "#FF6600",
     "city": "Brampton",
     "branch": "Abacus",
-    "assigned": true
+    "assigned": "true"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "color": "yellow",
     "city": "Brampton",
     "branch": "Pillsworth",
-    "assigned": false
+    "assigned": "false"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "color": "green",
     "city": "Bolton",
     "branch": "Abacus",
-    "assigned": false
+    "assigned": "false"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "color": "#333333",
     "city": "Bolton",
     "branch": "Pillsworth",
-    "assigned": true
+    "assigned": "true"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "color": "#FF6600",
     "city": "Brampton",
     "branch": "Abacus",
-    "assigned": true
+    "assigned": "true"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "color": "red",
     "city": "Brampton",
     "branch": "Pillsworth",
-    "assigned": false
+    "assigned": "false"
   },
   {
     "id": 7,
@@ -67,6 +67,6 @@
     "color": "red",
     "city": "Toronto",
     "branch": "Abacus",
-    "assigned": false
+    "assigned": "false"
   }
 ]

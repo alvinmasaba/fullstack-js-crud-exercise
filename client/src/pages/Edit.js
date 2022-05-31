@@ -11,13 +11,13 @@ const initialState = {
   color: "",
   city: "",
   branch: "",
-  active: "",
+  assigned: "",
 };
 
 const Edit = () => {
   const [state, setState] = useState(initialState);
 
-  const { name, code, profession, color, city, branch, active } = state;
+  const { name, code, profession, color, city, branch, assigned } = state;
 
   const history = useNavigate(); // Use to navigate to homepage.
 
@@ -41,9 +41,9 @@ const Edit = () => {
           color,
           city,
           branch,
-          active
+          assigned
         }).then(() => {
-           setState({ name: "", code: "", profession: "", color: "", city: "", branch: "", active: "" });
+           setState({ name: "", code: "", profession: "", color: "", city: "", branch: "", assigned: "" });
         }).catch((err) => toast.error(err.response.data));
       toast.success("Employee Updated Successfully!")
       setTimeout(() => history(-1), 500);
@@ -122,25 +122,25 @@ const Edit = () => {
         />
         <section className="toggle-active">Assigned:
           <div>
-            <label htmlFor="active">Yes</label>
+            <label htmlFor="assigned">Yes</label>
             <input
               type="radio"
               id="active"
-              name="active"
+              name="assigned"
               value="true"
               onChange={handleInputChange}
-              checked={active === 'true'}
+              checked={assigned === 'true'}
             />
           </div>
           <div>
-            <label htmlFor="active">No</label>
+            <label htmlFor="assigned">No</label>
             <input
               type="radio"
               id="inactive"
-              name="active"
+              name="assigned"
               value="false"
               onChange={handleInputChange}
-              checked={active === 'false'}
+              checked={assigned === 'false'}
             />
           </div>
         </section>

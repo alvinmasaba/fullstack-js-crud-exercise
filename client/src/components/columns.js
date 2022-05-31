@@ -25,7 +25,7 @@ export const COLUMNS = [
   },
   {
     Header: 'Assigned',
-    accessor: 'active'
+    accessor: 'assigned'
   },
   {
     Header: 'Action'

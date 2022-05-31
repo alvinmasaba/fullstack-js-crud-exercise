@@ -8,9 +8,9 @@ const View = () => {
 
   const {id} = useParams();
 
-  function IsActive(data) {
-    const active = data;
-    if (active === 'true') {
+  function IsAssigned(data) {
+    const assigned = data;
+    if (assigned === 'true') {
       return "Yes";
     }
     return "No";
@@ -53,7 +53,7 @@ const View = () => {
             <br />
             <br />
             <strong>Assigned: </strong>
-            <span>{IsActive(employee.active)}</span>
+            <span>{IsAssigned(employee.assigned)}</span>
             <br />
             <br />
             <Link to="/employees">
@@ -65,4 +65,4 @@ const View = () => {
   )
 }
 
-export default View
+export default View;
