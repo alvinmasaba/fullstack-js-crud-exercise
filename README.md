@@ -74,4 +74,4 @@ OUTCOME:
   to more complex and rewarding projects.  
 
 
---Launch both servers by running 'npm start' from the server directory.
+*Launch both servers by running 'npm start' from the server directory.
