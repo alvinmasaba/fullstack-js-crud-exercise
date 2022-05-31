@@ -10,9 +10,7 @@ const dbPromise = open({
 });
 
 // API ENDPOINTS
-
 router.get('/', async (req, res) => {
-  // Allows database to load before attempting query.
   const db = await dbPromise;
 
   const employees = await db.all("SELECT * FROM Employees;");

@@ -21,11 +21,12 @@ app.use(bodyParser.json());
 app.use('/employees', employeesRoutes);
 
 const setup = async () => {
-  const db = await dbPromise
-  await db.migrate()
+  // Allows database to load before attempting query.
+  const db = await dbPromise;
+  await db.migrate();
   app.listen(5000, () => {
     console.log("Server is running on port 5000!");
-  })
-}
+  });
+};
 
 setup();

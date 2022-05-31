@@ -43,13 +43,13 @@ export const Table = () => {
       // Inserts action buttons beneath the Action column.
       // Target id can be retrieved from cell.row.original.
       return <>
+              <Link to={`/view-employee/${cell.row.original.id}`}>
+                <button className="btn btn-view">View</button>
+              </Link>
               <Link to={`/update-employee/${cell.row.original.id}`}>
                 <button className="btn btn-edit">Edit</button>
               </Link>
               <button className="btn btn-delete" onClick={() => deleteEmployee(cell.row.original.id)}>Delete</button>
-              <Link to={`/view-employee/${cell.row.original.id}`}>
-                <button className="btn btn-view">View</button>
-              </Link>
             </>
     } else {
       return cell.render('Cell')
