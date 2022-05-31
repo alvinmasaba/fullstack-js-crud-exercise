@@ -7,7 +7,7 @@ CREATE TABLE Employees (
   color STRING,
   city STRING,
   branch STRING,
-  active STRING
+  assigned STRING
 );
 
 -- Down

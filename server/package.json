@@ -7,7 +7,7 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"cd ../client && npm start\"",
     "server": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,9 @@
     "sqlite3": "^5.0.8"
   },
   "devDependencies": {
-    "supertest": "^6.2.3"
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "supertest": "^6.2.3",
+    "ts-jest": "^28.0.3"
   }
 }

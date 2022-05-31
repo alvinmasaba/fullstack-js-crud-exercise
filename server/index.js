@@ -4,7 +4,7 @@ import { open } from "sqlite";
 import cors from "cors"; // Use to access backend API from React.
 import bodyParser from "body-parser"; // Allows access to body of request object.
 
-import employeesRoutes from "./routes/employees.js";
+import employeesRoutes from "./routes/router.js";
 
 const app = express();
 
