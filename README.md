@@ -73,3 +73,5 @@ OUTCOME:
   understanding of these core concepts and react on the whole will allow me to contribute 
   to more complex and rewarding projects.  
 
+
+--Launch both servers by running 'npm start' from the server directory.
