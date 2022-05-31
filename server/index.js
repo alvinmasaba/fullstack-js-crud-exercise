@@ -28,4 +28,4 @@ const setup = async () => {
   })
 }
 
-setup()
+setup();

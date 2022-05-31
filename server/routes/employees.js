@@ -12,7 +12,9 @@ const dbPromise = open({
 // API ENDPOINTS
 
 router.get('/', async (req, res) => {
-  const db = await dbPromise;   // Allows database to load before attempting query.
+  // Allows database to load before attempting query.
+  const db = await dbPromise;
+
   const employees = await db.all("SELECT * FROM Employees;");
   res.send(employees);
 });
@@ -22,7 +24,9 @@ router.post('/', async (req, res) => {
   const { name, code, profession, color, city, branch, active } = req.body;
   const sqlInsert = 
     "INSERT INTO Employees (name, code, profession, color, city, branch, active) VALUES (?, ?, ?, ?, ?, ?, ?)";
-  const employee = [name, code, profession, color, city, branch, active]; // Receives these values from the front end.
+  
+  // Receives these values from the front end.  
+  const employee = [name, code, profession, color, city, branch, active];
   db.run(sqlInsert, employee);
   res.redirect('/');
 });

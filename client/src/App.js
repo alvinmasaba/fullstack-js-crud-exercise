@@ -6,9 +6,14 @@ import Add from "./pages/Add";
 import Edit from "./pages/Edit";
 import Home from "./pages/Home";
 import View from "./pages/View";
+import { BasicTable } from './components/BasicTable'
 
 function App() {
   return (
+    <div className='App'>
+      <BasicTable />
+    </div>
+    /*
     <BrowserRouter>
       <div className="App">
         <ToastContainer position='top-center' />
@@ -20,6 +25,7 @@ function App() {
           </Routes>
       </div>
     </BrowserRouter>
+    */
   );
 }
 

@@ -17,5 +17,8 @@
     "nodemon": "^2.0.16",
     "sqlite": "^4.1.1",
     "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "supertest": "^6.2.3"
   }
 }
