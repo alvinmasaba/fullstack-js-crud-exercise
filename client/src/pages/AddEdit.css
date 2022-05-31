@@ -38,6 +38,6 @@ input[type="submit"]:hover {
 .toggle-active {
   display: flex;
   justify-content: space-evenly;
-  height: 2em;
+  height: 3em;
   align-items: center;
 }
