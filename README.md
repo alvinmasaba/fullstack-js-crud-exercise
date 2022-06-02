@@ -10,6 +10,8 @@ TASK: Create a simple CRUD application that does the following:
 
 Libraries used:
 
+- react
+- react-router-dom
 - toastify
 - axios
 - cors
