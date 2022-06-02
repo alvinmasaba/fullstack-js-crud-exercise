@@ -72,7 +72,7 @@ const Edit = () => {
           id="name"
           name="name"
           placeholder="Your Name ..."
-          value={state.name}
+          value={name}
           onChange={handleInputChange}
         />
         <label htmlFor="code">Code</label>
@@ -81,7 +81,7 @@ const Edit = () => {
           id="code"
           name="code"
           placeholder="Code ..."
-          value={ code }
+          value={code}
           onChange={handleInputChange}
         />
         <label htmlFor="profession">Profession</label>
@@ -90,7 +90,7 @@ const Edit = () => {
           id="profession"
           name="profession"
           placeholder="Your Profession ..."
-          value={ profession }
+          value={profession}
           onChange={handleInputChange}
         />
         <label htmlFor="color">Color</label>
@@ -99,7 +99,7 @@ const Edit = () => {
           id="color"
           name="color"
           placeholder="Your Color ..."
-          value={ color }
+          value={color}
           onChange={handleInputChange}
         />
         <label htmlFor="city">City</label>
@@ -108,7 +108,7 @@ const Edit = () => {
           id="city"
           name="city"
           placeholder="Your City ..."
-          value={ city }
+          value={city}
           onChange={handleInputChange}
         />
         <label htmlFor="branch">Branch</label>
@@ -117,7 +117,7 @@ const Edit = () => {
           id="branch"
           name="branch"
           placeholder="Your Branch ..."
-          value={ branch }
+          value={branch}
           onChange={handleInputChange}
         />
         <section className="toggle-active">Assigned:
